@@ -10,110 +10,100 @@ namespace Recibos.UWP.Services
     // TODO WTS: Delete this file once your app is using real data.
     public static class SampleDataService
     {
-        private static IEnumerable<SampleOrder> AllOrders()
+        private static IEnumerable<ReciboModel> TodosRecibos()
         {
             // The following is order summary data
-            var data = new ObservableCollection<SampleOrder>
+            var data = new ObservableCollection<ReciboModel>
             {
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 70,
-                    OrderDate = new DateTime(2017, 05, 24),
-                    Company = "Company F",
-                    ShipTo = "Francisco Pérez-Olaeta",
-                    OrderTotal = 2490.00,
-                    Status = "Closed",
-                    Symbol = (char)57643 // Symbol.Globe
+                    ReciboId = 1,
+                    Data = new DateTime(2018, 05, 2),
+                    TomadorNome = "Janeide Simões",
+                    TomadorCpf = "12345678901",
+                    Servico = "Declaração de Imposto de Renda",
+                    Valor = Convert.ToDouble("100,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 71,
-                    OrderDate = new DateTime(2017, 05, 24),
-                    Company = "Company CC",
-                    ShipTo = "Soo Jung Lee",
-                    OrderTotal = 1760.00,
-                    Status = "Closed",
-                    Symbol = (char)57737 // Symbol.Audio
+                    ReciboId = 2,
+                    Data = new DateTime(2018, 05, 5),
+                    TomadorNome = "Adna Santana",
+                    TomadorCpf = "23456789012",
+                    Servico = "Escrita de contrato de locação",
+                    Valor = Convert.ToDouble("20,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 72,
-                    OrderDate = new DateTime(2017, 06, 03),
-                    Company = "Company Z",
-                    ShipTo = "Run Liu",
-                    OrderTotal = 2310.00,
-                    Status = "Closed",
-                    Symbol = (char)57699 // Symbol.Calendar
+                    ReciboId = 3,
+                    Data = new DateTime(2018, 05, 10),
+                    TomadorNome = "Rebeca Nunes",
+                    TomadorCpf = "34567890123",
+                    Servico = "Entrada de documentos na JUCEPE",
+                    Valor = Convert.ToDouble("50,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 73,
-                    OrderDate = new DateTime(2017, 06, 05),
-                    Company = "Company Y",
-                    ShipTo = "John Rodman",
-                    OrderTotal = 665.00,
-                    Status = "Closed",
-                    Symbol = (char)57620 // Symbol.Camera
+                    ReciboId = 4,
+                    Data = new DateTime(2018, 05, 12),
+                    TomadorNome = "Laura Cunha",
+                    TomadorCpf = "45678901234",
+                    Servico = "Declaração de Imposto de Renda",
+                    Valor = Convert.ToDouble("100,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 74,
-                    OrderDate = new DateTime(2017, 06, 07),
-                    Company = "Company H",
-                    ShipTo = "Elizabeth Andersen",
-                    OrderTotal = 560.00,
-                    Status = "Shipped",
-                    Symbol = (char)57633 // Symbol.Clock
+                    ReciboId = 5,
+                    Data = new DateTime(2018, 05, 15),
+                    TomadorNome = "Pedro Siqueira",
+                    TomadorCpf = "56789012345",
+                    Servico = "Instalação de programas no PC",
+                    Valor = Convert.ToDouble("80,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 75,
-                    OrderDate = new DateTime(2017, 06, 07),
-                    Company = "Company F",
-                    ShipTo = "Francisco Pérez-Olaeta",
-                    OrderTotal = 810.00,
-                    Status = "Shipped",
-                    Symbol = (char)57661 // Symbol.Contact
+                    ReciboId = 6,
+                    Data = new DateTime(2018, 05, 16),
+                    TomadorNome = "Carlos Nunes Jr.",
+                    TomadorCpf = "67890123456",
+                    Servico = "Abertura de empresa",
+                    Valor = Convert.ToDouble("250,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 76,
-                    OrderDate = new DateTime(2017, 06, 11),
-                    Company = "Company I",
-                    ShipTo = "Sven Mortensen",
-                    OrderTotal = 196.50,
-                    Status = "Shipped",
-                    Symbol = (char)57619 // Symbol.Favorite
+                    ReciboId = 7,
+                    Data = new DateTime(2018, 05, 20),
+                    TomadorNome = "Katia Maria",
+                    TomadorCpf = "78901234567",
+                    Servico = "Folha de pagamento de doméstica",
+                    Valor = Convert.ToDouble("74,95")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 77,
-                    OrderDate = new DateTime(2017, 06, 14),
-                    Company = "Company BB",
-                    ShipTo = "Amritansh Raghav",
-                    OrderTotal = 270.00,
-                    Status = "New",
-                    Symbol = (char)57615 // Symbol.Home
+                    ReciboId = 8,
+                    Data = new DateTime(2018, 05, 22),
+                    TomadorNome = "Mônica Oliveira",
+                    TomadorCpf = "89012345678",
+                    Servico = "Arte de cartão de visitas",
+                    Valor = Convert.ToDouble("25,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 78,
-                    OrderDate = new DateTime(2017, 06, 14),
-                    Company = "Company A",
-                    ShipTo = "Anna Bedecs",
-                    OrderTotal = 736.00,
-                    Status = "New",
-                    Symbol = (char)57625 // Symbol.Mail
+                    ReciboId = 9,
+                    Data = new DateTime(2018, 05, 25),
+                    TomadorNome = "Guilherme Nascimento",
+                    TomadorCpf = "90123456789",
+                    Servico = "Declaração de Imposto de Renda",
+                    Valor = Convert.ToDouble("100,00")
                 },
-                new SampleOrder
+                new ReciboModel
                 {
-                    OrderId = 79,
-                    OrderDate = new DateTime(2017, 06, 18),
-                    Company = "Company K",
-                    ShipTo = "Peter Krschne",
-                    OrderTotal = 800.00,
-                    Status = "New",
-                    Symbol = (char)57806 // Symbol.OutlineStar
+                    ReciboId = 10,
+                    Data = new DateTime(2018, 5, 30),
+                    TomadorNome = "Gerlane Silva",
+                    TomadorCpf = "01234567890",
+                    Servico = "Gravação de CD/DVD",
+                    Valor = Convert.ToDouble("10,00")
                 },
             };
 
@@ -121,9 +111,9 @@ namespace Recibos.UWP.Services
         }
 
         // TODO WTS: Remove this once your grid page is displaying real data
-        public static ObservableCollection<SampleOrder> GetGridSampleData()
+        public static ObservableCollection<ReciboModel> GetGridSampleData()
         {
-            return new ObservableCollection<SampleOrder>(AllOrders());
+            return new ObservableCollection<ReciboModel>(TodosRecibos());
         }
     }
 }

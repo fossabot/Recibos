@@ -20,7 +20,7 @@ namespace Recibos.UWP.Views
             InitializeComponent();
         }
 
-        public ObservableCollection<SampleOrder> Source
+        public ObservableCollection<ReciboModel> Source
         {
             get
             {
@@ -43,5 +43,31 @@ namespace Recibos.UWP.Views
         }
 
         private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+        private void AddRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+        }
+
+        private void EdtRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+        }
+
+        private void DelRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+        }
+
+        private void PrnRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+        }
+
+        private void Settings_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Chama a página de configurações
+            this.Frame.Navigate(typeof(SettingsPage));
+        }
     }
 }

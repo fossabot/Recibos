@@ -7,21 +7,26 @@
     Style="{StaticResource PageStyle}"
     xmlns:tg="using:Telerik.UI.Xaml.Controls.Grid"
     mc:Ignorable="d">
-    <Grid
-        x:Name="ContentArea"
-        Margin="{StaticResource MediumLeftRightMargin}">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
-        <Grid
-            Grid.Row="1" 
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+        <TextBlock Grid.Row="0" x:Uid="Main_Title" Style="{StaticResource PageTitleStyle}" />
+
+        <CommandBar Grid.Row="1" x:Uid="Commands" Background="Transparent" DefaultLabelPosition="Right">
+            <AppBarButton x:Name="AddRecibo" Icon="Add" Label="Adicionar" Click="AddRecibo_Click"/>
+            <AppBarButton x:Name="EdtRecibo" Icon="Edit" Label="Editar" Click="EdtRecibo_Click"/>
+            <AppBarButton x:Name="DelRecibo" Icon="Delete" Label="Apagar" Click="DelRecibo_Click"/>
+            <AppBarButton x:Name="PrnRecibo" Icon="Print" Label="Imprimir" Click="PrnRecibo_Click"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="Settings" Icon="Setting" Label="Configurações" Click="Settings_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+        <Grid Grid.Row="2" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
             <tg:RadDataGrid ColumnDataOperationsMode="Flyout" x:Name="grid" ItemsSource="{x:Bind Source}" />
         </Grid>
     </Grid>
