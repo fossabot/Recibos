@@ -1,0 +1,15 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+configuration: Debug
+platform: x86
+environment:
+  secret_key: GM7V4jP+0VRkMwfP5ojzig==
+install:
+- ps: >-
+    iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/secure-file/master/install.ps1'))
+- cmd: >-
+    appveyor-tools\secure-file -decrypt Recibos.UWP\Recibos.UWP_TemporaryKey.pfx.enc -secret %secret_key%
+before_build:
+- ps: nuget restore
+build:
+  verbosity: minimal
