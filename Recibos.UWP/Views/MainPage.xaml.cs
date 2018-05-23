@@ -52,7 +52,8 @@ namespace Recibos.UWP.Views
 
         private void EdtRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-
+            // Chama a página de edição de recibos
+            this.Frame.Navigate(typeof(EdtReciboPage));
         }
 
         private void DelRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)

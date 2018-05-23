@@ -211,4 +211,8 @@ Este app é completamente gratuito, sem addons ou propagandas. Se ele o auxilia 
     <value>Comentários</value>
     <comment>Displayed as the link to launching the Feedback Hub.</comment>
   </data>
+  <data name="EdtRecibo_Title.Text" xml:space="preserve">
+    <value>Editar Recibo</value>
+    <comment>Page title for EdtReciboPage</comment>
+  </data>
 </root>
