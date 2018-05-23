@@ -158,8 +158,8 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RecibosPage.xaml.cs">
-      <DependentUpon>RecibosPage.xaml</DependentUpon>
+    <Compile Include="Views\AdcReciboPage.xaml.cs">
+      <DependentUpon>AdcReciboPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
@@ -207,7 +207,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\RecibosPage.xaml">
+    <Page Include="Views\AdcReciboPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

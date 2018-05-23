@@ -129,9 +129,9 @@
     <value>Emissor de Recibos</value>
     <comment>Page title for MainPage</comment>
   </data>
-  <data name="Recibos_Title.Text" xml:space="preserve">
-    <value>Recibos</value>
-    <comment>Page title for RecibosPage</comment>
+  <data name="AdcRecibo_Title.Text" xml:space="preserve">
+    <value>Adicionar Recibos</value>
+    <comment>Page title for AdcReciboPage</comment>
   </data>
   <data name="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" xml:space="preserve">
     <value>File name is null or empty. Specify a valid file name</value>

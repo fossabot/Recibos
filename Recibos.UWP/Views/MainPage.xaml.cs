@@ -46,7 +46,8 @@ namespace Recibos.UWP.Views
 
         private void AddRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-
+            // Chama a página de adição de recibos
+            this.Frame.Navigate(typeof(AdcReciboPage));
         }
 
         private void EdtRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
