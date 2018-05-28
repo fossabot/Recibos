@@ -152,8 +152,8 @@
     <Compile Include="Services\SampleDataService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Services\WhatsNewDisplayService.cs" />
-    <Compile Include="Views\EdtReciboPage.xaml.cs">
-      <DependentUpon>EdtReciboPage.xaml</DependentUpon>
+    <Compile Include="Views\EditReciboPage.xaml.cs">
+      <DependentUpon>EditReciboPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FirstRunDialog.xaml.cs">
       <DependentUpon>FirstRunDialog.xaml</DependentUpon>
@@ -161,8 +161,11 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdcReciboPage.xaml.cs">
-      <DependentUpon>AdcReciboPage.xaml</DependentUpon>
+    <Compile Include="Views\AddReciboPage.xaml.cs">
+      <DependentUpon>AddReciboPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrnReciboPage.xaml.cs">
+      <DependentUpon>PrnReciboPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
@@ -202,7 +205,7 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Views\EdtReciboPage.xaml">
+    <Page Include="Views\EditReciboPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -214,7 +217,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\AdcReciboPage.xaml">
+    <Page Include="Views\AddReciboPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PrnReciboPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

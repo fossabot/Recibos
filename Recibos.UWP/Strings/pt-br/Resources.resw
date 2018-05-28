@@ -215,4 +215,8 @@ Este app é completamente gratuito, sem addons ou propagandas. Se ele o auxilia 
     <value>Editar Recibo</value>
     <comment>Page title for EdtReciboPage</comment>
   </data>
+  <data name="PrnRecibo_Title.Text" xml:space="preserve">
+    <value>Recibo</value>
+    <comment>Page title for PrnReciboPage</comment>
+  </data>
 </root>
