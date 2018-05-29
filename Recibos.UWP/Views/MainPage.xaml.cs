@@ -56,14 +56,35 @@ namespace Recibos.UWP.Views
             this.Frame.Navigate(typeof(EdtReciboPage));
         }
 
-        private void DelRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void DelRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            // Cancela a adição do recibo atual.
+            ContentDialog dialog = new ContentDialog
+            {
+                Title = "Apagar Recibo",
+                Content = "Se prosseguir, este recibo será apagado. Deseja continuar?",
+                PrimaryButtonText = "Sim",
+                SecondaryButtonText = "Não"
+            };
 
+            ContentDialogResult result = await dialog.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                // Apaga o recibo
+            }
         }
 
-        private void PrnRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void PrnRecibo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            ContentDialog dialog = new ContentDialog
+            {
+                Title = "Imprimir Recibo",
+                Content = "A implementar",
+                CloseButtonText = "OK"
+            };
 
+            ContentDialogResult result = await dialog.ShowAsync();
         }
 
         private void Settings_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)

@@ -52,7 +52,7 @@ namespace Recibos.UWP.Views
             ContentDialog dialog = new ContentDialog
             {
                 Title = "Cancelar Editar Recibo",
-                Content = "Se prosseguir, os dados serão apagados. Deseja continuar?",
+                Content = "Se prosseguir, os dados não serão alterados. Deseja continuar?",
                 PrimaryButtonText = "Sim",
                 SecondaryButtonText = "Não"
             };
