@@ -219,4 +219,19 @@ Este app é completamente gratuito, sem addons ou propagandas. Se ele o auxilia 
     <value>Recibo</value>
     <comment>Page title for PrnReciboPage</comment>
   </data>
+  <data name="Settings_Prestador.Text" xml:space="preserve">
+    <value>Prestador</value>
+  </data>
+  <data name="Settings_PrestadorAlterar.Content" xml:space="preserve">
+    <value>Alterar Prestador</value>
+  </data>
+  <data name="Settings_PrestadorCpf.Text" xml:space="preserve">
+    <value>CPF do Prestador</value>
+  </data>
+  <data name="Settings_PrestadorNome.Text" xml:space="preserve">
+    <value>Nome do Prestador</value>
+  </data>
+  <data name="Settings_OneDrive.Text" xml:space="preserve">
+    <value>OneDrive</value>
+  </data>
 </root>
