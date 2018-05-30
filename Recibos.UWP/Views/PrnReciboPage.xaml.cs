@@ -6,9 +6,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace Recibos.UWP.Views
 {
-    public sealed partial class RecibosPage : Page, INotifyPropertyChanged
+    public sealed partial class PrnReciboPage : Page, INotifyPropertyChanged
     {
-        public RecibosPage()
+        public PrnReciboPage()
         {
             InitializeComponent();
         }

@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Recibos.UWP.Views.PrnReciboPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid
+        x:Name="ContentArea"
+        Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            x:Uid="PrnRecibo_Title"
+            Style="{StaticResource PageTitleStyle}" />
+        <Grid
+            Grid.Row="1" 
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <RichTextBlock FontSize="16"  TextAlignment="Justify">
+                <Paragraph TextAlignment="Right">
+                    <Bold>R$ 220,00</Bold></Paragraph>
+                <Paragraph/>
+                <Paragraph/>
+                <Paragraph>Recebi de
+                    <Bold>TOMADOR</Bold>, CPF/CNPJ TOMADORCPF a quantia supra de R$ VALOR (VALOR POR EXTENSO), pela prestação de serviço de SERVICO, pelo que dou plena, geral, rasa e irrevogável quitação, na melhor forma do Direito.</Paragraph>
+                <Paragraph/>
+                <Paragraph/>
+                <Paragraph>CIDADEUF, DATA.</Paragraph>
+                <Paragraph/>
+                <Paragraph/>
+                <Paragraph>
+                    <Bold>PRESTADOR</Bold>
+                    <LineBreak/>CPF/CNPJ PRESTADORCPF</Paragraph>
+            </RichTextBlock>
+        </Grid>
+    </Grid>
+</Page>
