@@ -95,5 +95,17 @@ namespace Recibos.UWP.Views
             var launcher = Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.GetDefault();
             await launcher.LaunchAsync();
         }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new ContentDialog
+            {
+                Title = "Alterar Prestador",
+                Content = "A implementar",
+                CloseButtonText = "OK"
+            };
+
+            ContentDialogResult result = await dialog.ShowAsync();
+        }
     }
 }
