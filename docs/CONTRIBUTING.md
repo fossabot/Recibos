@@ -38,3 +38,5 @@ Essa refência precisa seguir o seguinte formato:
 ```Título do seu pull request. Resolve #issue```
 
 Onde #issue é ao número da issue aberta. Dessa forma, ao ser mesclado, a issue referenciada será fechada automagicamente.
+
+PRs precisam ser assinados com uma chave GPG válida, o que significa que o autor possui o direito de submeter seu trabalho sob a licença MIT e concorda com os termos de um [Certificado de Origem de Desenvolvedor](https://developercertificate.org/). Se não estiver assinado, o PR será rejeitado e seu autor comunicado da necessidade de assina-lo.
