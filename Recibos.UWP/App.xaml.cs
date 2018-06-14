@@ -7,6 +7,8 @@ using Recibos.UWP.Services;
 
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
+using Recibos.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Recibos.UWP
 {
@@ -24,10 +26,15 @@ namespace Recibos.UWP
             InitializeComponent();
 
             // TODO WTS: Add your app in the app center and set your secret here. More at https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/uwp
-            AppCenter.Start("{Your App Secret}", typeof(Analytics));
+            AppCenter.Start("7bbed3f3-89e9-4250-a42f-6eaa0542c6e2", typeof(Analytics));
 
             // Deferred execution until used. Check https://msdn.microsoft.com/library/dd642331(v=vs.110).aspx for further info on Lazy<T> class.
             _activationService = new Lazy<ActivationService>(CreateActivationService);
+
+            using (var db = new RecibosContext())
+            {
+                db.Database.Migrate();
+            }
         }
 
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
