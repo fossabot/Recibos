@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Recibos.Model;
+using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 using Windows.UI.Xaml.Controls;
@@ -31,6 +33,19 @@ namespace Recibos.UWP.Views
         private async void BtnSalvar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             // Salva os dados do recibo no banco.
+            using (var db = new RecibosContext())
+            {
+                var recibo = new Recibo
+                {
+                    TomadorNome = TomadorNome.Text,
+                    TomadorCpf = TomadorCpf.Text,
+                    ServicoDescricao = ServicoDesc.Text,
+                    ServicoValor = ServicoValor.Text,
+                    ServicoData = ServicoData.Date.ToString()
+                };
+                db.Recibos.Add(recibo);
+                await db.SaveChangesAsync();
+            }
 
             // Pergunta ao usuário se deseja adicionar um novo recibo.
             ContentDialog dialog = new ContentDialog

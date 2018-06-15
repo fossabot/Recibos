@@ -5,8 +5,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Style="{StaticResource PageStyle}"
-    xmlns:tg="using:Telerik.UI.Xaml.Controls.Grid"
-    mc:Ignorable="d">
+    xmlns:data="using:Recibos.Model"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48"/>
@@ -27,7 +28,49 @@
         </CommandBar>
 
         <Grid Grid.Row="2" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <tg:RadDataGrid ColumnDataOperationsMode="Flyout" x:Name="grid" ItemsSource="{x:Bind Source}" Margin="0,0,0,12"/>
+            <ListView x:Name="TodosRecibos">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid Padding="12" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.75*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3.5*"/>
+                                <ColumnDefinition Width="3.5*"/>
+                                <ColumnDefinition Width="0.75*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Recibo" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Grid.Column="1" Text="Data" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Grid.Column="2" Text="Tomador" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Grid.Column="3" Text="Serviço" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Grid.Column="4" Text="Valor" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="Bold" Foreground="White"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:Name="ListaRecibos" x:DataType="data:Recibo">
+                        <Grid Height="48" AutomationProperties.Name="{x:Bind ReciboId}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.75*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3.5*"/>
+                                <ColumnDefinition Width="3.5*"/>
+                                <ColumnDefinition Width="0.75*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock VerticalAlignment="Center" Text="{x:Bind ReciboId}"/>
+                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{x:Bind ServicoData}"/>
+                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{x:Bind TomadorNome}"/>
+                            <TextBlock Grid.Column="3" VerticalAlignment="Center" Text="{x:Bind ServicoDescricao}"/>
+                            <TextBlock Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right" Text="{x:Bind ServicoValor}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
         </Grid>
     </Grid>
 </Page>

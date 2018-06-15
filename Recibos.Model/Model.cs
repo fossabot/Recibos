@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 
 namespace Recibos.Model
 {
@@ -21,5 +22,8 @@ namespace Recibos.Model
         public string ServicoDescricao { get; set; }
         public string ServicoValor { get; set; }
         public string ServicoData { get; set; }
+
+        //public List<Recibo> Recibos { get; set; }
+
     }
 }

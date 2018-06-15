@@ -1,10 +1,7 @@
 ﻿using System;
-
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
-
 using Recibos.UWP.Services;
-
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Recibos.Model;

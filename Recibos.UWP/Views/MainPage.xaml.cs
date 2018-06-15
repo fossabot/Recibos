@@ -1,31 +1,25 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
-
-using Recibos.UWP.Models;
-using Recibos.UWP.Services;
-
+using Recibos.Model;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace Recibos.UWP.Views
 {
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
-        // TODO WTS: Change the grid as appropriate to your app.
-        // For help see http://docs.telerik.com/windows-universal/controls/raddatagrid/gettingstarted
-        // You may also want to extend the grid to work with the RadDataForm http://docs.telerik.com/windows-universal/controls/raddataform/dataform-gettingstarted
         public MainPage()
         {
             InitializeComponent();
         }
 
-        public ObservableCollection<ReciboModel> Source
+        private void Page_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            get
+            using (var db = new RecibosContext())
             {
-                // TODO WTS: Replace this with your actual data
-                return SampleDataService.GetGridSampleData();
+                TodosRecibos.ItemsSource = db.Recibos.ToList();
             }
         }
 
